@@ -22,15 +22,15 @@ namespace sumOfNumbers
             for (int i = 1; i <= number; i++)
             {
                 int firstRemainder = i % firstMultiple;
-                int secondRemainderFive = i % secondMultiple;
+                int secondRemainder = i % secondMultiple;
 
-                if (firstRemainder == 0 || secondRemainderFive == 0)
+                if (firstRemainder == 0 || secondRemainder == 0)
                 {
                     sum += i;
                 }
             }
             
-            Console.WriteLine($"Сумма всех положительных чисел меньше {number} (включая число), которое кратно 3 или 5 равно {sum}");
+            Console.WriteLine($"Сумма всех положительных чисел меньше {number} (включая число), которое кратно {firstMultiple} или {secondMultiple} равно {sum}");
         }
     }
 }
