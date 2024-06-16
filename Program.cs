@@ -10,23 +10,26 @@ namespace sumOfNumbers
     {
         static void Main(string[] args)
         {
-            Random rand = new Random();
-            int number = rand.Next(0, 100);
+            Random random = new Random();
+            int maxNumber = 100;
+            int number = random.Next(maxNumber);
             int sum = 0;
+            int firstMultiple = 3;
+            int secondMultiple = 5;
 
             Console.WriteLine($"Случайное число {number}.");
 
             for (int i = 1; i <= number; i++)
             {
-                int remainderThree = i % 3;
-                int remainderFive = i % 5;
-                bool isRemainder = remainderThree == 0 || remainderFive == 0;
+                int firstRemainder = i % firstMultiple;
+                int secondRemainderFive = i % secondMultiple;
 
-                if (isRemainder == true)
+                if (firstRemainder == 0 || secondRemainderFive == 0)
                 {
                     sum += i;
                 }
             }
+            
             Console.WriteLine($"Сумма всех положительных чисел меньше {number} (включая число), которое кратно 3 или 5 равно {sum}");
         }
     }
