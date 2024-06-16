@@ -20,9 +20,9 @@ namespace sumOfNumbers
             {
                 int remainderThree = i % 3;
                 int remainderFive = i % 5;
-                bool remainder = remainderThree == 0 || remainderFive == 0;
+                bool isRemainder = remainderThree == 0 || remainderFive == 0;
 
-                if (remainder == true)
+                if (isRemainder == true)
                 {
                     sum += i;
                 }
